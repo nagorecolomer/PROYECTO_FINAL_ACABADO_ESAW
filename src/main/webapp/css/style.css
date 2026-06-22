@@ -1,0 +1,277 @@
+:root {
+    --bg-main: #070b19;          /* Azul marino profundo (Deep Blue Space) */
+    --bg-card: #0d1527;          /* Azul de contenedor denso de alta seguridad */
+    --border-cyber: #1e2942;     /* Bordes azulados de tecnología integrada */
+    
+    /* Colores de interfaz activa */
+    --terminal-green: #00ff66;   /* Texto e interacciones de éxito */
+    --cyber-blue: #00bfff;       /* Enlaces principales, Navbar y Títulos (Cian) */
+    --alert-red: #ff3366;        /* Alertas críticas y acciones destructivas */
+    
+    /* Fuentes de texto */
+    --text-primary: #e2e8f0;     /* Blanco suave de alta legibilidad */
+    --text-muted: #64748b;       /* Gris azulado para marcas de tiempo y metadatos */
+}
+
+/*BASE GENERAL*/
+body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-primary) !important;
+    font-family: 'Courier New', Courier, monospace !important; /* Estilo terminal */
+    margin: 0;
+    padding: 0;
+}
+
+/*BARRA SUPERIOR */
+.navbar, navbar, [class*="navbar"] {
+    background-color: var(--bg-card) !important;
+    border-bottom: 2px solid var(--cyber-blue) !important;
+    box-shadow: 0 4px 20px rgba(0, 191, 255, 0.15) !important;
+}
+
+.navbar a, .navbar-brand {
+    color: var(--cyber-blue) !important;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.4);
+}
+
+/*TARJETAS Y CONTENEDORES*/
+.card, [class*="card"], .profile-card, .tweet-card, [class*="sidebar"], [class*="suggestions"] {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-cyber) !important;
+    border-radius: 4px !important; /* Bordes rectos tácticos */
+    color: var(--text-primary) !important;
+    box-shadow: none !important;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.card:hover, [class*="card"]:hover, [class*="sidebar"]:hover, [class*="suggestions"]:hover {
+    border-color: var(--cyber-blue) !important;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.08) !important;
+}
+
+/* TÍTULOS TÉCNICOS */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cyber-blue) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+h3::before, h4::before {
+    content: "> " !important;
+    color: var(--terminal-green) !important;
+    font-weight: bold;
+}
+
+small, .timestamp, .text-muted {
+    color: var(--text-muted) !important;
+    font-family: monospace !important;
+}
+
+/*FORMULARIOS Y CAMPOS DE ENTRADA GENERALES */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="file"],
+textarea,
+select,
+.w3-input,
+.w3-select {
+    background-color: var(--bg-main) !important;
+    border: 1px solid var(--border-cyber) !important;
+    color: var(--terminal-green) !important;
+    font-family: monospace !important;
+    border-radius: 2px !important;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--terminal-green) !important;
+    outline: none !important;
+    box-shadow: 0 0 8px rgba(0, 255, 102, 0.25) !important;
+}
+
+/*BOTONES*/
+/* Primario (Publicar / Azul Cyber) */
+.btn-primary, button[type="submit"], [class*="btn-post"] {
+    background-color: transparent !important;
+    border: 1px solid var(--cyber-blue) !important;
+    color: var(--cyber-blue) !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--cyber-blue) !important;
+    color: var(--bg-main) !important;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.3) !important;
+}
+
+/* Éxito (Modificar / Seguir / Verde Terminal) */
+.btn-success, [class*="follow"], [class*="edit"] {
+    background-color: transparent !important;
+    border: 1px solid var(--terminal-green) !important;
+    color: var(--terminal-green) !important;
+    text-transform: uppercase;
+}
+
+.btn-success:hover {
+    background-color: var(--terminal-green) !important;
+    color: var(--bg-main) !important;
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.3) !important;
+}
+
+/* Peligro (Borrar / Logout / Rojo Alerta) */
+.btn-danger, [class*="delete"], [class*="logout"] {
+    background-color: transparent !important;
+    border: 1px solid var(--alert-red) !important;
+    color: var(--alert-red) !important;
+    text-transform: uppercase;
+}
+
+.btn-danger:hover {
+    background-color: var(--alert-red) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.3) !important;
+}
+
+/* IMÁGENES / AVATARES */
+img {
+    filter: grayscale(20%) brightness(90%) contrast(110%);
+    border: 1px solid var(--border-cyber);
+}
+
+/*PIE DE PÁGINA*/
+.footer, footer, [class*="footer"] {
+    background-color: var(--bg-main) !important; 
+    border-top: 1px solid var(--border-cyber) !important; 
+    color: var(--text-muted) !important; 
+    box-shadow: none !important;
+    padding: 5px 0 !important;
+    margin: 0 !important;
+    height: auto !important;
+    min-height: 20px !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer p, footer p, .footer div, footer div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.footer a, footer a {
+    color: var(--text-muted) !important;
+    text-shadow: none !important;
+}
+
+.footer a:hover {
+    color: var(--cyber-blue) !important;
+}
+
+/*TABLA DE ADMINISTRACIÓN DE USUARIOS */
+/* Forzar texto oscuro en celdas y cabeceras para contrastar con el fondo claro de Bootstrap */
+.table td, table td, 
+.table th, table th,
+.table td *, table td * {
+    color: #000000 !important; /* Negro absoluto para nombres, correos, etc. */
+}
+
+/* Cabeceras de la tabla */
+.table thead th, table thead th {
+    color: #333333 !important; /* Gris oscuro para ID, Name, Email... */
+}
+
+/* Estilo específico para los selectores de Roles dentro de la tabla */
+.table select, table select, select {
+    color: #ffffff !important;                     /* Texto del rol en blanco */
+    background-color: var(--bg-main) !important;  /* Caja del selector en azul oscuro */
+    border: 1px solid var(--border-cyber) !important;
+    font-weight: bold !important;
+}
+
+/* Estilo para las opciones desplegables del Rol */
+.table select option, table select option, select option {
+    background-color: var(--bg-card) !important;  /* Fondo oscuro al desplegarse */
+    color: #ffffff !important;                     /* Texto de las opciones en blanco */
+}
+
+/* COMENTARIS DE PROFESSIONALS */
+.w3-card .professional-comment-container,
+.w3-container .professional-comment-container {
+    border: 1px solid var(--cyber-blue) !important;
+    border-left: 4px solid var(--terminal-green) !important;
+    background: linear-gradient(90deg, rgba(0, 191, 255, 0.12) 0%, rgba(13, 21, 39, 0.96) 45%, rgba(13, 21, 39, 1) 100%) !important;
+    border-radius: 4px !important;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.w3-card .professional-comment-badge,
+.w3-container .professional-comment-badge {
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 6px;
+    padding: 2px 8px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--bg-main) !important;
+    background-color: var(--terminal-green) !important;
+    border-radius: 999px;
+}
+
+/* GUEST TIMELINE */
+.guest-feed-hero {
+    border: 1px solid var(--cyber-blue) !important;
+    box-shadow: 0 0 14px rgba(0, 191, 255, 0.14) !important;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guest-tweet-card {
+    border: 1px solid var(--border-cyber) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guest-tweet-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(0, 191, 255, 0.16) !important;
+}
+
+.guest-tweet-content {
+    text-align: center;
+    font-size: 1.02rem;
+    line-height: 1.45;
+    margin-top: 8px;
+    margin-bottom: 6px;
+}
+
+/* LAYOUT GUEST A PANTALLA CENTRADA */
+.w3-row-padding > .guest-side-hidden {
+    display: none !important;
+}
+
+.w3-row-padding > .guest-content-full {
+    float: none !important;
+    width: 100% !important;
+    max-width: 980px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.w3-row-padding > .guest-content-full .w3-panel {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
